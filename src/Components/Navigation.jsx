@@ -5,8 +5,8 @@ function Navigation() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   return (
-    <div className="shadow-md">
-      <div className="grid grid-cols-2 max-w-6xl mx-auto bg-white py-1 px-2 it items-center">
+    <div className="shadow-md ">
+      <div className="grid grid-cols-2 max-w-6xl mx-auto bg-white py-1 px-2 it items-center ">
         <div className="flex items-center  ">
           <img src="public/images/Logo.png" alt="Logo" className="h-12" />
         </div>

@@ -8,32 +8,36 @@ function AboutMain() {
             className="hidden md:flex w-350"
           ></img>
         </div>
-        <div>
-          <h2 className="text-lg">
-            <b>Our Company</b>
-          </h2>
-          <p className="flex flex-wrap text-gray-500 leading-6.5 ">
-            4 IT-Bridge Nepal is a privately held company, consisting of a
-            creative and multi-talented team comprised of web designers, web
-            developers and graphic designers. We provide a wide range of
-            services including web design, web development, and mobile
-            application development, web hosting, and consulting. IT-Bridge
-            Nepal offers customer-oriented services and delivers creative and
-            effective results.
-          </p>
+        <div className="flex flex-col gap-2">
+          <div>
+            <h2 className="text-xl">
+              <b>Our Company</b>
+            </h2>
+          </div>
+          <div>
+            <p className="flex flex-wrap text-gray-500 leading-6.5 ">
+              4 IT-Bridge Nepal is a privately held company, consisting of a
+              creative and multi-talented team comprised of web designers, web
+              developers and graphic designers. We provide a wide range of
+              services including web design, web development, and mobile
+              application development, web hosting, and consulting. IT-Bridge
+              Nepal offers customer-oriented services and delivers creative and
+              effective results.
+            </p>
+          </div>
         </div>
       </div>
       <div>
         <div className="flex gap-10 max-w-6xl mx-auto ">
-          <div className="w-120">
+          <div>
             <img
               src="public/images/aboutContainerImage.jpg"
-              className="hidden md:flex"
+              className="hidden md:flex w-120"
             ></img>
           </div>
           <div className="flex flex-col gap-2">
             <div>
-              <h2 className="text-l">
+              <h2 className="text-xl">
                 <b>Vision</b>
               </h2>
             </div>
@@ -47,20 +51,20 @@ function AboutMain() {
           </div>
         </div>
         <div className="flex gap-10 max-w-6xl mx-auto ">
-          <div className="w-345">
+          <div>
             <img
               src="public/images/Teamwork.jpg"
-              className="hidden md:flex"
+              className="hidden md:flex w-345 "
             ></img>
           </div>
           <div className="flex flex-col gap-2">
             <div>
-              <h2 className="text-l">
+              <h2 className="text-xl">
                 <b>Why Choose Us ?</b>
               </h2>
             </div>
             <div>
-              <p className="flex flex-wrap text-gray-500 leading-6.5">
+              <p className="flex flex-wrap text-gray-500 leading-6.5 ">
                 Nepal is fast emerging as a key destination of IT sector.
                 IT-Bridge is a new Generation Software Company. In this scenario
                 IT-Bridge has experienced dedicated development teams, Combining

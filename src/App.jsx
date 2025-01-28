@@ -6,8 +6,13 @@ import Service from "./Components/Pages/Services/Service";
 import Work from "./Components/Pages/Work/Work";
 import Career from "./Components/Pages/Career/Career";
 import Contact from "./Components/Pages/Contact/Contact";
-
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function App() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div>
       <Navigation />

@@ -6,7 +6,7 @@ function HomeImages() {
           <b>IT Bridge is perfect for your Business</b>
         </h2>
       </div>
-      <div className="flex flex-col justify-center items-center gap-30 md:gap-30 lg:gap-45 md:flex-row mb-8 p-20">
+      <div className="flex flex-col justify-center items-center gap-30 md:gap-30 lg:gap-45 md:flex-row mb-8 p-10">
         <div className="flex flex-col gap-5 justify-center align-center">
           <div>
             <img
@@ -48,7 +48,7 @@ function HomeImages() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center gap-30 md:gap-30 lg:gap-45 md:flex-row mb-10 p-20">
+      <div className="flex flex-col justify-center items-center gap-30 md:gap-30 lg:gap-45 md:flex-row mb-15 p-10">
         <div className="flex flex-col gap-5 justify-center align-center">
           <div>
             <img

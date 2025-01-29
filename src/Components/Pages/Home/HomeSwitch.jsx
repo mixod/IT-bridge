@@ -7,7 +7,7 @@ function HomeSwitch() {
       <ul>
         {data.map((item) => (
           <li key={item.id}>
-            <NavLink to={"/home/" + item.id}>{item.id}</NavLink>
+            <NavLink to={"/about"}>{item.id}</NavLink>
           </li>
         ))}
       </ul>

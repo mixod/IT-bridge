@@ -60,6 +60,7 @@ function ContactForm() {
               onChange={(e) => setName(e.target.value)}
               value={name}
               placeholder="Full Name"
+              className="bg-gray-100 p-2 rounded-md w-full"
             />
           </div>
           <div>
@@ -68,6 +69,7 @@ function ContactForm() {
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               placeholder="Email"
+              className="bg-gray-100 p-2 rounded-md w-full"
             ></input>
           </div>
           <div>
@@ -76,6 +78,7 @@ function ContactForm() {
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
               placeholder="Phone Number"
+              className="bg-gray-100 p-2 rounded-md w-full"
             ></input>
           </div>
           <div>
@@ -84,7 +87,7 @@ function ContactForm() {
               onChange={(e) => setSubject(e.target.value)}
               value={subject}
               placeholder="Subject"
-              className="p-3"
+              className="bg-gray-100 p-2 rounded-md w-full"
             ></input>
           </div>
           <div>
@@ -94,16 +97,16 @@ function ContactForm() {
               cols="50"
               onChange={(e) => setDescription(e.target.value)}
               value={description}
+              className="bg-gray-100 p-2 rounded-md w-full"
             ></textarea>
           </div>
           <div>
-            <button onClick={submit}>
-              <div className="flex gap-2">
-                <div>
-                  <IoIosSend />
-                </div>
-                <div>Send</div>
-              </div>
+            <button
+              onClick={submit}
+              className="bg-red-600 hover:bg-red-500 text-white px-6 py-2 rounded-md  flex items-center gap-2"
+            >
+              <IoIosSend className="text-xl" />
+              <span>Send</span>
             </button>
           </div>
         </div>

@@ -4,10 +4,26 @@ import HomeSwitch from "./HomeSwitch";
 function Home() {
   return (
     <>
-      <div>
-        <div className="bg-[url('/images/circle.png')] bg-cover bg-center">
-          <div>
-            <img src="public/images/itbridge-1.png" className="w-400"></img>
+      <div
+        className=" bg-cover bg-center w-fit"
+        style={{ backgroundImage: "url(/images/mainbackground.jpg)" }}
+      >
+        <div
+          className=" bg-cover bg-center w-fit"
+          style={{ backgroundImage: "url(/images/stars-1.png)" }}
+        >
+          <div
+            className=" bg-cover bg-center w-fit"
+            style={{ backgroundImage: "url(/images/dots-5.png)" }}
+          >
+            <div
+              className=" bg-cover bg-center"
+              style={{ backgroundImage: "url(/images/circle.png)" }}
+            >
+              <div>
+                <img src="public/images/itbridge-1.png" className="w-400"></img>
+              </div>
+            </div>
           </div>
         </div>
       </div>

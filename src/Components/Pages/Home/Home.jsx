@@ -9,19 +9,22 @@ function Home() {
         style={{ backgroundImage: "url(/images/mainbackground.jpg)" }}
       >
         <div
-          className=" bg-cover bg-center w-fit"
+          className=" bg-cover bg-center w-fit transition-transform duration-700 hover:scale-95"
           style={{ backgroundImage: "url(/images/stars-1.png)" }}
         >
           <div
-            className=" bg-cover bg-center w-fit"
+            className=" bg-cover bg-center w-fit transition-transform duration-700 hover:scale-95"
             style={{ backgroundImage: "url(/images/dots-5.png)" }}
           >
             <div
-              className=" bg-cover bg-center"
+              className=" bg-cover bg-center transition-transform duration-700 hover:scale-120"
               style={{ backgroundImage: "url(/images/circle.png)" }}
             >
               <div>
-                <img src="public/images/itbridge-1.png" className="w-400"></img>
+                <img
+                  src="public/images/itbridge-1.png"
+                  className="w-400 transition-transform duration-300 hover:scale-100"
+                ></img>
               </div>
             </div>
           </div>

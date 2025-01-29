@@ -6,9 +6,11 @@ import Service from "./Components/Pages/Services/Service";
 import Work from "./Components/Pages/Work/Work";
 import Career from "./Components/Pages/Career/Career";
 import Contact from "./Components/Pages/Contact/Contact";
+import "./App.css";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -26,6 +28,7 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

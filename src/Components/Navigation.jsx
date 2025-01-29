@@ -13,7 +13,7 @@ function Navigation() {
         <div
           className={
             showMediaIcons
-              ? " flex flex-wrap justify-center align-center h-10  top-14 fixed w-full"
+              ? " flex flex-wrap justify-center align-center h-10  top-14 fixed w-full lg:static"
               : "hidden lg:flex justify-end"
           }
         >

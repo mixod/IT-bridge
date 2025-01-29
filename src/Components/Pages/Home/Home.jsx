@@ -1,3 +1,6 @@
+import HomeImages from "./HomeImages";
+import HomeSwitch from "./HomeSwitch";
+
 function Home() {
   return (
     <>
@@ -36,6 +39,8 @@ function Home() {
           </div>
         </div>
       </div>
+      <HomeSwitch />
+      <HomeImages />
     </>
   );
 }

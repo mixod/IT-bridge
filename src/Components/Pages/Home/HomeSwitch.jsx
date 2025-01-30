@@ -11,7 +11,7 @@ function HomeSwitch() {
               <div
                 className="h-80 bg-cover bg-center text-white text-xl rounded"
                 style={{ backgroundImage: `url(${item.image})` }}
-                data-aos="fade-up-right"
+                data-aos="fade-up-left"
               >
                 <h2 className="flex pt-70 px-8">{item.desc}</h2>
               </div>

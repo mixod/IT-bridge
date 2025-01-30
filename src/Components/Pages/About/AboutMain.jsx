@@ -1,7 +1,7 @@
 function AboutMain() {
   return (
     <>
-      <div className="max-w-6xl mx-auto flex justify-between py-10 gap-10">
+      <div className="max-w-6xl mx-auto mb-5 flex justify-between py-10 gap-10">
         <div>
           <img
             src="public/images/aboutImageDesc.png"
@@ -74,7 +74,7 @@ function AboutMain() {
                 reliable business systems because:
               </p>
             </div>
-            <div>
+            <div className="mb-5">
               <ul>
                 <li>Avoid the risk.</li>
                 <li>Follow Conceptual Integrity.</li>

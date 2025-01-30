@@ -6,7 +6,7 @@ function Footer() {
   return (
     <>
       <div className="bg-red-400 p-10">
-        <div className="flex max-w-6xl mx-auto justify-between items center">
+        <div className="flex flex-col md:flex-row max-w-6xl mx-auto justify-between items center">
           <div>
             <h2>
               <b>Want to work together?</b>

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./Components/Pages/Home/Home";
 import Navigation from "./Components/Navigation";
 import About from "./Components/Pages/About/About";
@@ -18,17 +18,26 @@ function App() {
   }, []);
   return (
     <div>
-      <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/works" element={<Work />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Navigation />
+              <Outlet />
+              <Footer />
+            </>
+          }
+        >
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/works" element={<Work />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
       </Routes>
-      <Footer />
     </div>
   );
 }

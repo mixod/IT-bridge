@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { dataFooter } from "../../assets/FooterData";
+import MainFooterSection from "./MainFooterSection";
 function Footer() {
   return (
     <>
@@ -16,7 +17,10 @@ function Footer() {
               {dataFooter.map((item) => (
                 <li key={item.id}>
                   <NavLink to={"/contact"}>
-                    <button className="bg-white hover:text-black text-red-400 px-6 py-2  flex items-center gap-2">
+                    <button
+                      className="bg-white hover:text-black text-red-400 px-6 py-2  flex items-center gap-2"
+                      data-aos="fade-right"
+                    >
                       {item.content}
                     </button>
                   </NavLink>
@@ -26,6 +30,7 @@ function Footer() {
           </div>
         </div>
       </div>
+      <MainFooterSection />
     </>
   );
 }

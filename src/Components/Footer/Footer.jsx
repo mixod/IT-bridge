@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { dataFooter } from "../../assets/FooterData";
 import MainFooterSection from "./MainFooterSection";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { HiArrowRightCircle } from "react-icons/hi2";
 function Footer() {
   return (
     <>
@@ -25,7 +25,7 @@ function Footer() {
                       <div className="flex gap-2">
                         <div>{item.content}</div>
                         <div className="p-1">
-                          <MdOutlineKeyboardArrowRight />
+                          <HiArrowRightCircle />
                         </div>
                       </div>
                     </button>

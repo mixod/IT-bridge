@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { dataFooter } from "../../assets/FooterData";
 import MainFooterSection from "./MainFooterSection";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 function Footer() {
   return (
     <>
@@ -21,7 +22,12 @@ function Footer() {
                       className="bg-white hover:text-black text-red-400 px-6 py-2  flex items-center gap-2"
                       data-aos="fade-right"
                     >
-                      {item.content}
+                      <div className="flex gap-2">
+                        <div>{item.content}</div>
+                        <div className="p-1">
+                          <MdOutlineKeyboardArrowRight />
+                        </div>
+                      </div>
                     </button>
                   </NavLink>
                 </li>

@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Components/Footer/Footer";
+import MainRoute from "./Components/Pages/Services/routing/MainRoute";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/service/:id" element={<MainRoute />} />
           <Route path="/works" element={<Work />} />
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />

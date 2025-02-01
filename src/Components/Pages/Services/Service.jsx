@@ -8,10 +8,8 @@ function Service() {
       const response = await fetch("https://itbridge.com.np/api/service");
       const data = await response.json();
       console.log(data);
-      setProduct(Array.isArray(data) ? data : []);
     } catch (error) {
       console.log(error);
-      setProduct([]);
     }
   }
   useEffect(() => {

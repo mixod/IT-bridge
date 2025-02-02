@@ -32,22 +32,31 @@ function Career() {
           services and delivers creative and effective results.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto mb-15 gap-15 p-15 ">
-        {careers.map((item) => (
-          <div key={item.id}>
-            <div className="flex flex-col gap-4 shadow-sm p-5">
-              <div>
-                <img src={item.photo}></img>
+      <div className="bg-gray-200">
+        <div>
+          <h2 className="flex text-2xl max-w-6xl mx-auto  justify-center items-center p-10 ">
+            Currently opening Positions
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto mb-15 gap-15 p-15 ">
+          {careers.map((item) => (
+            <div key={item.id}>
+              <div className="flex flex-col gap-4 shadow-sm p-5">
+                <div>
+                  <img src={item.photo}></img>
+                </div>
+                <div>
+                  <b>{item.title}</b>
+                </div>
+                <NavLink to={"/career/" + item.slug}>
+                  <div>
+                    We are group of young motivated engineers who ......
+                  </div>
+                </NavLink>
               </div>
-              <div>
-                <b>{item.title}</b>
-              </div>
-              <NavLink to={"/career/" + item.slug}>
-                <div>We are group of young motivated engineers who ......</div>
-              </NavLink>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );

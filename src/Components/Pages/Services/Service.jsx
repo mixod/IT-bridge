@@ -8,6 +8,7 @@ function Service() {
       const response = await fetch("https://itbridge.com.np/api/service");
       const data = await response.json();
       console.log(data);
+      setProduct(data.data);
     } catch (error) {
       console.log(error);
     }
@@ -22,13 +23,26 @@ function Service() {
           Our Services
         </div>
       </div>
+      <div className="max-w-6xl mx-auto flex justify-center items-center p-10 text-xl">
+        <h2>
+          <b>Service We Provide For Your Business</b>
+        </h2>
+      </div>
       <div>
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto gap-1 ">
           {product.map((item) => (
             <div key={item.status}>
-              <NavLink to={"/service/" + item.status}>
-                <img src={item.photo}></img>
-              </NavLink>
+              <div
+                className="h-60 w-90 bg-cover bg-center mb-5 flex "
+                style={{ backgroundImage: `url(${item.photo})` }}
+              >
+                <NavLink
+                  to={"/service/" + item.slug}
+                  className="text-white pt-50 pl-20"
+                >
+                  {item.title}
+                </NavLink>
+              </div>
             </div>
           ))}
         </div>

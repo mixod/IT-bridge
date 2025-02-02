@@ -6,6 +6,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
 import { FaTwitter } from "react-icons/fa";
+
 function MainFooterSection() {
   return (
     <>
@@ -23,22 +24,22 @@ function MainFooterSection() {
               </li>
               <li>
                 <NavLink to={"/service"}>
-                  <a href="javascript:void(0)">Our Services</a>
+                  <a href="#">Our Services</a>
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/works"}>
-                  <a href="javascript:void(0)">Our Works</a>
+                  <a href="#">Our Works</a>
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/career"}>
-                  <a href="javascript:void(0)">Career</a>
+                  <a href="#">Career</a>
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/contact"}>
-                  <a href="javascript:void(0)">Contact Us</a>
+                  <a href="#">Contact Us</a>
                 </NavLink>
               </li>
             </ul>

@@ -15,9 +15,10 @@ function MainRoute() {
   }
   const filterdatas = services.filter((item) => item.slug === params.slug);
   console.log(filterdatas);
-  if (filterdatas.length === 0) {
+  if (filterdatas === 0) {
     alert("there is no data in the array");
   }
+  const filterdata = filterdatas[0];
   useEffect(() => {
     dataFetch();
   }, []);
@@ -28,6 +29,7 @@ function MainRoute() {
           Our Services
         </div>
       </div>
+      <div>{filterdata && <div>{filterdata.title}</div>}</div>
     </div>
   );
 }

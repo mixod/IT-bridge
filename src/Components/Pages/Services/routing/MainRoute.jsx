@@ -29,7 +29,25 @@ function MainRoute() {
           Our Services
         </div>
       </div>
-      <div>{filterdata && <div>{filterdata.title}</div>}</div>
+      <div className="flex max-w-6xl mx-auto gap-20 p-10 justify-center items-center">
+        {filterdata && (
+          <div className="flex flex-col gap-10">
+            <div>
+              <img
+                src={filterdata.photo}
+                className="flex justify-center items-center h-60 w-95"
+              ></img>
+            </div>
+            <div className="flex flex-col gap-5 ">
+              <div>{filterdata.title}</div>
+              <div
+                dangerouslySetInnerHTML={{ __html: filterdata.excerpt }}
+                className="flex flex-wrap"
+              />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

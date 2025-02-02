@@ -40,7 +40,7 @@ function Service() {
                   to={"/service/" + item.slug}
                   className="text-white pt-50 pl-20"
                 >
-                  {item.title}
+                  <b>{item.title}</b>
                 </NavLink>
               </div>
             </div>

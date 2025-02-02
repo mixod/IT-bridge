@@ -32,7 +32,9 @@ function Work() {
                   <img src={item.photo} className="w-30 h-30 "></img>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div>{item.title}</div>
+                  <div className="text-l">
+                    <b>{item.title}</b>
+                  </div>
                   <div>{item.alias}</div>
                 </div>
               </div>

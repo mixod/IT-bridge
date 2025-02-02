@@ -26,7 +26,7 @@ function Work() {
       <div className="grid grid-col-1 lg:grid-cols-2 max-w-6xl mx-auto mt-20 ml-[15%]">
         {works.map((item) => (
           <div key={item.id}>
-            <NavLink to={"/service/" + item.slug}>
+            <NavLink to={"/works/" + item.slug}>
               <div className="flex gap-10 mb-10 shadow-sm mr-10 p-3">
                 <div>
                   <img src={item.photo} className="w-30 h-30 "></img>

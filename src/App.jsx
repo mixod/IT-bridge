@@ -12,6 +12,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Components/Footer/Footer";
 import MainRoute from "./Components/Pages/Services/routing/MainRoute";
+import WorkRoute from "./Components/Pages/Work/DescriptionWOrk/WorkRoute";
 
 function App() {
   useEffect(() => {
@@ -36,7 +37,7 @@ function App() {
           <Route path="/service" element={<Service />} />
           <Route path="/service/:slug" element={<MainRoute />} />
           <Route path="/works" element={<Work />} />
-          <Route path="/works/:id" element={<Work />} />
+          <Route path="/works/:slug" element={<WorkRoute />} />
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

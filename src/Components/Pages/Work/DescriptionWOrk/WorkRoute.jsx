@@ -35,8 +35,18 @@ function WorkRoute() {
                 {filterdata.alias}
               </div>
             </div>
-            <div>
-              <div>{filterdata.photo}</div>
+            <div className="flex flex-col md:flex-row max-w-6xl mx-auto justify-evenly mb-5">
+              <div>
+                <img src={filterdata.photo} className="h-50 w-50"></img>
+              </div>
+              <div className="flex flex-col gap-3 p-10">
+                <div>
+                  <h1 className="text-xl">
+                    <b>{filterdata.title}</b>
+                  </h1>
+                </div>
+                <div>{filterdata.alias}</div>
+              </div>
             </div>
           </div>
         )}

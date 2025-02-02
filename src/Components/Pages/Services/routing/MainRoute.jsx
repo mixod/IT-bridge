@@ -24,26 +24,30 @@ function MainRoute() {
   }, []);
   return (
     <div>
-      <div className="bg-gray-400 text-white p-20 text-3xl">
-        <div className="flex justify-center align-center max-w-6xl mt-10 mx-auto">
-          Our Services
-        </div>
-      </div>
-      <div className="flex max-w-6xl mx-auto gap-20 p-10 justify-center items-center">
+      <div>
         {filterdata && (
-          <div className="flex flex-col gap-10">
-            <div>
-              <img
-                src={filterdata.photo}
-                className="flex justify-center items-center h-60 w-95"
-              ></img>
+          <div>
+            <div className="bg-gray-400 text-white p-20 text-3xl  mb-10">
+              <div className="flex justify-center align-center max-w-6xl mt-10 mx-auto">
+                {filterdata.title}
+              </div>
             </div>
-            <div className="flex flex-col gap-5 ">
-              <div>{filterdata.title}</div>
-              <div
-                dangerouslySetInnerHTML={{ __html: filterdata.excerpt }}
-                className="flex flex-wrap"
-              />
+            <div className="flex flex-col gap-10 max-w-6xl mx-auto">
+              <div>
+                <img
+                  src={filterdata.photo}
+                  className="flex justify-center items-center h-60 w-95"
+                ></img>
+              </div>
+              <div className="flex flex-col gap-5 ">
+                <div>
+                  <b>{filterdata.title}</b>
+                </div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: filterdata.excerpt }}
+                  className="flex flex-wrap mb-10"
+                />
+              </div>
             </div>
           </div>
         )}

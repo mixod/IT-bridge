@@ -44,7 +44,7 @@ function MainRoute() {
         {filterdata && (
           <div>
             <div className="bg-gray-400 text-white p-20 text-3xl  mb-10">
-              <div className="flex justify-center align-center max-w-6xl mt-10 mx-auto">
+              <div className="flex justify-center align-center max-w-6xl mt-15 mx-auto">
                 {filterdata.title}
               </div>
             </div>

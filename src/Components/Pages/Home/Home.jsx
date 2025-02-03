@@ -5,6 +5,7 @@ import { AiFillLike } from "react-icons/ai";
 import { FaCode } from "react-icons/fa";
 import "./Home.css";
 import ServiceTop from "../Services/ServiceTop";
+import HomeSliderSection from "./HomeSliderSection";
 function Home() {
   return (
     <>
@@ -66,11 +67,11 @@ function Home() {
       <HomeImages />
       <div>
         <div
-          className=" bg-cover bg-center w-[100%] py-20 h-[350px] mb-10"
+          className=" md:block lg:block bg-cover bg-center w-[100%] py-50 md:py-20 h-[100%] mb-10 "
           style={{ backgroundImage: "url(/images/career-inner-3.jpg)" }}
         >
           <div className="overlayHome">
-            <ul className="flex max-w-6xl mx-auto justify-evenly">
+            <ul className="flex max-w-6xl flex-wrap mx-auto justify-evenly gap-10">
               <li className="flex flex-col items-center" data-aos="fade-right">
                 <div className="bg-red-800 rounded-full w-35 p-10">
                   <TiGroup className="h-15 w-15 text-white" />
@@ -106,6 +107,9 @@ function Home() {
 
       <div>
         <ServiceTop />
+      </div>
+      <div>
+        <HomeSliderSection />
       </div>
     </>
   );

@@ -35,7 +35,7 @@ function Work() {
   return (
     <>
       <div className="bg-gray-400 text-white p-20 text-3xl">
-        <div className="flex justify-center align-center max-w-6xl mt-10 mx-auto">
+        <div className="flex justify-center align-center max-w-6xl mt-15 mx-auto">
           Our Works
         </div>
       </div>

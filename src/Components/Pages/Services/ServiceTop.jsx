@@ -39,7 +39,7 @@ function ServiceTop() {
         </h2>
       </div>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto gap-1 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto gap-1 p-7 lg:p-0">
           {product.map((item) => (
             <div key={item.status}>
               <div

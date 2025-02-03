@@ -5,7 +5,7 @@ function Navigation() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
 
   return (
-    <div className="fixed w-full shadow-md bg-white z-1000">
+    <div className="fixed w-full shadow-md bg-white z-1000 h-20 py-3">
       <div className="grid grid-cols-2 max-w-6xl mx-auto bg-white py-1 px-2 it items-center ">
         <div className="flex items-center  ">
           <img src="public/images/Logo.png" alt="Logo" className="h-12" />
@@ -17,11 +17,11 @@ function Navigation() {
               : "hidden lg:flex justify-end"
           }
         >
-          <ul className="flex w-full justify-end flex-col bg-white p-10 lg:p-2 lg:flex-row items-center text-gray-700 gap-5 ">
+          <ul className="flex w-full justify-end flex-col bg-white p-10 lg:p-2 lg:flex-row items-center text-gray-700 gap-8 ">
             <li>
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-amber-400" : ""
+                  isPending ? "pending" : isActive ? "text-amber-500" : ""
                 }
                 to="/home"
               >
@@ -31,7 +31,7 @@ function Navigation() {
             <li>
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-amber-400" : ""
+                  isPending ? "pending" : isActive ? "text-amber-500" : ""
                 }
                 to="/about"
               >
@@ -41,7 +41,7 @@ function Navigation() {
             <li>
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-amber-400" : ""
+                  isPending ? "pending" : isActive ? "text-amber-500" : ""
                 }
                 to="/service"
               >
@@ -51,7 +51,7 @@ function Navigation() {
             <li>
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-amber-400" : ""
+                  isPending ? "pending" : isActive ? "text-amber-500" : ""
                 }
                 to="/works"
               >
@@ -61,7 +61,7 @@ function Navigation() {
             <li>
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-amber-400" : ""
+                  isPending ? "pending" : isActive ? "text-amber-500" : ""
                 }
                 to="/career"
               >
@@ -71,7 +71,7 @@ function Navigation() {
             <li>
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-amber-400" : ""
+                  isPending ? "pending" : isActive ? "text-amber-500" : ""
                 }
                 to="/contact"
               >

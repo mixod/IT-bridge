@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 function MainRoute() {
   const params = useParams();
   const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(false);
   async function dataFetch() {
     try {
+      setLoading(true);
       const response = await fetch("https://itbridge.com.np/api/service");
       const data = await response.json();
       setServices(data.data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
   const filterdatas = services.filter((item) => item.slug === params.slug);
@@ -22,6 +27,17 @@ function MainRoute() {
   useEffect(() => {
     dataFetch();
   }, []);
+  if (loading) {
+    return (
+      <div className="text-center text-xl p-80">
+        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+          <p>
+            <Skeleton count={100} />
+          </p>
+        </SkeletonTheme>
+      </div>
+    );
+  }
   return (
     <div>
       <div>

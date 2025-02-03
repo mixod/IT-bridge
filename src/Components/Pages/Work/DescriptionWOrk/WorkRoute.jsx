@@ -1,17 +1,21 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 function WorkRoute() {
   const params = useParams();
   const [works, setWorks] = useState([]);
+  const [loading, setLoading] = useState(false);
   async function fetchApiWork() {
     try {
+      setLoading(true);
       const response = await fetch("https://itbridge.com.np/api/work");
       const data = await response.json();
 
       setWorks(data.data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -25,6 +29,17 @@ function WorkRoute() {
   useEffect(() => {
     fetchApiWork();
   }, []);
+  if (loading) {
+    return (
+      <div className="text-center text-xl p-80">
+        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+          <p>
+            <Skeleton count={100} />
+          </p>
+        </SkeletonTheme>
+      </div>
+    );
+  }
   return (
     <>
       <div>

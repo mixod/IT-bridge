@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 function Service() {
   const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(false);
   async function service() {
     try {
       const response = await fetch("https://itbridge.com.np/api/service");
@@ -11,11 +12,24 @@ function Service() {
       setProduct(data.data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
   useEffect(() => {
     service();
   }, []);
+  if (loading) {
+    return (
+      <div className="text-center text-xl p-80">
+        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+          <p>
+            <Skeleton count={100} />
+          </p>
+        </SkeletonTheme>
+      </div>
+    );
+  }
   return (
     <>
       <div className="bg-gray-400 text-white p-20 text-3xl">

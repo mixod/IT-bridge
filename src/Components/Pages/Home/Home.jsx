@@ -1,6 +1,10 @@
 import HomeImages from "./HomeImages";
 import HomeSwitch from "./HomeSwitch";
-
+import { TiGroup } from "react-icons/ti";
+import { AiFillLike } from "react-icons/ai";
+import { FaCode } from "react-icons/fa";
+import "./Home.css";
+import ServiceTop from "../Services/ServiceTop";
 function Home() {
   return (
     <>
@@ -60,6 +64,49 @@ function Home() {
       </div>
       <HomeSwitch />
       <HomeImages />
+      <div>
+        <div
+          className=" bg-cover bg-center w-[100%] py-20 h-[350px] mb-10"
+          style={{ backgroundImage: "url(/images/career-inner-3.jpg)" }}
+        >
+          <div className="overlayHome">
+            <ul className="flex max-w-6xl mx-auto justify-evenly">
+              <li className="flex flex-col items-center" data-aos="fade-right">
+                <div className="bg-red-800 rounded-full w-35 p-10">
+                  <TiGroup className="h-15 w-15 text-white" />
+                </div>
+                <div className="text-white text-4xl">35</div>
+                <div className="text-white ">Employees</div>
+              </li>
+              <li className="flex flex-col items-center" data-aos="fade-right">
+                <div className="bg-red-800 rounded-full w-35 p-10">
+                  <AiFillLike className="h-15 w-15 text-white" />
+                </div>
+                <div className="text-white text-4xl">100 %</div>
+                <div className="text-white ">Happy Clients</div>
+              </li>
+              <li className="flex flex-col items-center" data-aos="fade-right">
+                <div className="bg-red-800 rounded-full w-35 p-10">
+                  <FaCode className="h-15 w-15 text-white" />
+                </div>
+                <div className="text-white text-4xl">500</div>
+                <div className="text-white ">Project Complete</div>
+              </li>
+              <li className="flex flex-col items-center" data-aos="fade-right">
+                <div className="bg-red-800 rounded-full w-35 p-10">
+                  <TiGroup className="h-15 w-15 text-white" />
+                </div>
+                <div className="text-white text-4xl">7</div>
+                <div className="text-white ">Business Year</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <ServiceTop />
+      </div>
     </>
   );
 }

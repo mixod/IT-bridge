@@ -20,31 +20,31 @@ function App() {
     Aos.init();
   }, []);
   return (
-    <div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Navigation />
-              <Outlet />
-              <Footer />
-            </>
-          }
-        >
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/service/:slug" element={<MainRoute />} />
-          <Route path="/works" element={<Work />} />
-          <Route path="/works/:slug" element={<WorkRoute />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/career/:slug" element={<CareerRoute />} />
-          <Route path="/contact" element={<Contact />} />
-        </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Navigation />
+
+            <Outlet />
+
+            <Footer />
+          </>
+        }
+      >
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/service/:slug" element={<MainRoute />} />
+        <Route path="/works" element={<Work />} />
+        <Route path="/works/:slug" element={<WorkRoute />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/career/:slug" element={<CareerRoute />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
 }
 

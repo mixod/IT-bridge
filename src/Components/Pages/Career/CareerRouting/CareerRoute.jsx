@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BiSolidShoppingBagAlt } from "react-icons/bi";
+import { TiGroup } from "react-icons/ti";
+import { SlCalender } from "react-icons/sl";
+import { FaLocationDot } from "react-icons/fa6";
 
 function CareerRoute() {
   const params = useParams();
@@ -34,15 +37,36 @@ function CareerRoute() {
                 {filterdata.title}
               </div>
             </div>
-            <div>
-              <div dangerouslySetInnerHTML={{ __html: filterdata.excerpt }} />
+            <div className="grid grid-cols-1 lg:grid-cols-2  max-w-6xl mx-auto gap-30 mb-10">
+              <div
+                dangerouslySetInnerHTML={{ __html: filterdata.excerpt }}
+                className="flex flex-wrap"
+              />
               <div>
-                <ul>
+                <ul className="bg-red-500 text-white p-5">
                   <li className="flex">
                     <div className="p-1">
                       <BiSolidShoppingBagAlt />
                     </div>
                     <div>Position: {filterdata.title}</div>
+                  </li>
+                  <li className="flex">
+                    <div className="p-1">
+                      <TiGroup />
+                    </div>
+                    <div>Opening Positions: {filterdata.opening_position}</div>
+                  </li>
+                  <li className="flex">
+                    <div className="p-1">
+                      <SlCalender />
+                    </div>
+                    <div>Deadline: {filterdata.deadline}</div>
+                  </li>
+                  <li className="flex">
+                    <div className="p-1">
+                      <FaLocationDot />
+                    </div>
+                    <div>Location: {filterdata.location}</div>
                   </li>
                 </ul>
               </div>

@@ -8,6 +8,8 @@ import { IoIosSend } from "react-icons/io";
 function CareerRoute() {
   const params = useParams();
   const [careers, setCareers] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   async function careerApiFetch() {
     try {
       const response = await fetch("https://itbridge.com.np/api/career");
@@ -16,6 +18,8 @@ function CareerRoute() {
       setCareers(data.data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
   const filterdatas = careers.filter((item) => item.slug === params.slug);
@@ -27,6 +31,11 @@ function CareerRoute() {
   useEffect(() => {
     careerApiFetch();
   }, []);
+
+  if (loading) {
+    return <div className="text-center text-xl p-100">Loading .....</div>;
+  }
+
   return (
     <div>
       <div>

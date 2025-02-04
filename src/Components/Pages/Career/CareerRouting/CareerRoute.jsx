@@ -5,6 +5,7 @@ import { TiGroup } from "react-icons/ti";
 import { SlCalender } from "react-icons/sl";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 function CareerRoute() {
   const params = useParams();
   const [careers, setCareers] = useState([]);
@@ -31,11 +32,17 @@ function CareerRoute() {
   useEffect(() => {
     careerApiFetch();
   }, []);
-
   if (loading) {
-    return <div className="text-center text-xl p-100">Loading .....</div>;
+    return (
+      <div className="text-center text-xl p-80">
+        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+          <p>
+            <Skeleton count={100} />
+          </p>
+        </SkeletonTheme>
+      </div>
+    );
   }
-
   return (
     <div>
       <div>

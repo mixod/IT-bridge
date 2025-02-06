@@ -55,7 +55,7 @@ function Navigation() {
                     ? "pending"
                     : isActive
                     ? "text-amber-500 hover:border-b-amber-300"
-                    : "hover:border-b-amber-300"
+                    : ""
                 }
                 to="/works"
               >

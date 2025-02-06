@@ -51,7 +51,11 @@ function Navigation() {
             <li>
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-amber-500" : ""
+                  isPending
+                    ? "pending"
+                    : isActive
+                    ? "text-amber-500 hover:border-b-amber-300"
+                    : "hover:border-b-amber-300"
                 }
                 to="/works"
               >

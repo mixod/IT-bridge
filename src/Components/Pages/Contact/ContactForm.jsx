@@ -31,12 +31,34 @@ function ContactForm() {
     }
     setError("");
     console.log(name, email, phone, subject, description);
+    post();
     setName("");
     setPhone("");
     setEmail("");
     setSubject("");
     setDescription("");
   }
+  const post = async () => {
+    try {
+      const res = await fetch("https://itbridge.com.np/api/contact-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone_no: phone,
+          subject: subject,
+          message: description,
+        }),
+      });
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className="flex flex-col justify-center items-center lg:flex-row max-w-6xl mx-auto lg:justify-between py-30">
